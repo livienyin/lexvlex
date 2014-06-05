@@ -1,0 +1,16 @@
+.navbar-inverse {
+  background-color: #1A7FD3;
+  border-color: #1F79B5;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-header a:hover {
+  color: white;
+}
+
+.jumbotron {
+  background-color: #1A7FD3;
+}
