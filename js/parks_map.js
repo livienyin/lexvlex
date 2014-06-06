@@ -24,7 +24,6 @@ var map = L.map('map', {
 var basemapTiles = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.i6fijbde/{z}/{x}/{y}.png').addTo(map);
 
 function style(feature) {
-
   var tractColor;
 
   if (feature.properties.number_of_parks == 0) {
@@ -40,7 +39,6 @@ function style(feature) {
     color: tractColor,
     fillOpacity: 0.6
   };
-
 }
 
 $.getJSON('./census_tracts.geojson', function(data) {
