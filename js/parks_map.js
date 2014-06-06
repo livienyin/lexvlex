@@ -24,12 +24,10 @@ var map = L.map('map', {
 var basemapTiles = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.i6fijbde/{z}/{x}/{y}.png').addTo(map);
 
 function style(feature) {
-  var tractColor;
+  var tractColor = '#b2df8a';
 
   if (feature.properties.number_of_parks == 0) {
     tractColor = '#aaa';
-  } else {
-    tractColor = '#b2df8a';
   }
 
   return {
