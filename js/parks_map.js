@@ -12,7 +12,7 @@ var statistics = {
   "total_park_acres": "Total Park Acreage",
   "biggest_park": "Largest Park by Area",
   "gardens": "Commnity Gardens"
-}
+};
 
 var map = L.map('map', {
   zoom: 11,
