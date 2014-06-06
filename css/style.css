@@ -40,6 +40,11 @@ body {
   height: 500px;
 }
 
+#map {
+  height: 500px;
+  width: 100%;
+}
+
 .comparison-row {
   position: relative;
   background-color: #ddd;
