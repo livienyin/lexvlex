@@ -25,7 +25,7 @@ var basemapTiles = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.i6
 
 function style(feature) {
 
-  tractColor = "#b2df8a";
+  var tractColor = "#b2df8a";
 
   return {
     fillColor: tractColor,
