@@ -25,7 +25,13 @@ var basemapTiles = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.i6
 
 function style(feature) {
 
-  var tractColor = "#b2df8a";
+  var tractColor;
+
+  if (feature.properties.number_of_parks == 0) {
+    tractColor = '#aaa';
+  } else {
+    tractColor = '#b2df8a';
+  }
 
   return {
     fillColor: tractColor,
