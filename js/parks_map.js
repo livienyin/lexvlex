@@ -44,6 +44,7 @@ function style(feature) {
 function popup(feature) {
   var tract = feature.properties;
   var popupText = '<strong>Tract Number ' + tract.tract_name + '</strong>';
+  return popupText;
 }
 
 $.getJSON('./census_tracts.geojson', function(data) {
