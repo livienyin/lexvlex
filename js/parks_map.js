@@ -23,6 +23,20 @@ var map = L.map('map', {
 
 var basemapTiles = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.i6fijbde/{z}/{x}/{y}.png').addTo(map);
 
+function style(feature) {
+
+  tractColor = "#b2df8a";
+
+  return {
+    fillColor: tractColor,
+    weight: 1,
+    opacity: 0.7,
+    color: tractColor,
+    fillOpacity: 0.6
+  };
+
+}
+
 $.getJSON('./census_tracts.geojson', function(data) {
   var census_tracts = L.geoJson(data, {
     style: style,
