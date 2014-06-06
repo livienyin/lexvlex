@@ -39,13 +39,17 @@ function style(feature) {
     color: tractColor,
     fillOpacity: 0.6
   };
-}
+};
 
 function popup(feature) {
   var tract = feature.properties;
   var popupText = '<strong>Tract Number ' + tract.tract_name + '</strong>';
   return popupText;
-}
+};
+
+function onEachFeature(feature, layer) {
+  layer.bindPopup(popup(feature));
+};
 
 $.getJSON('./census_tracts.geojson', function(data) {
   var census_tracts = L.geoJson(data, {
