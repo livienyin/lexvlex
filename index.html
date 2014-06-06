@@ -10,17 +10,30 @@
   <!-- stylesheet links -->
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Jacques+Francois' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <!-- javascript plugins -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand"><i class="fa fa-dashboard"></i> Lex v Lex</a>
+        <a class="navbar-brand"><i class="fa fa-bar-chart-o"></i> Lex v Lex</a>
       </div>
       <div class="navbar-collapse collapse">
         <p class="navbar-text">A neighborhood comparison tool for public spaces</p>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Download the Data</a></li>
+              <li><a href="http://data.lexingtonky.gov/" target="_blank">Open Data Portal</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -34,75 +47,92 @@
     </div>
   </div>
 
-  <div class="row comparison-row">
-    <div class="container table-container">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th><i class="fa fa-database"></i> Category</th>
-            <th><i class="fa fa-home"></i> Your Neighborhood</th>
-            <th><i class="fa fa-bar-chart-o"></i> City Average</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Total Park Acreage</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>Biggest Park</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Parks</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Playgrounds</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Trail Miles</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Sports Fields</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Community Gardens</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Event Spaces</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Activity Programs</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Dog Parks</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td># of Picnic Areas</td>
-            <td class="your-neighborhood-num">100</td>
-            <td>100</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <section class="row comparison-section">
+    <article id="parks" class="container comparison-container">
+      <div class="col-xs-6 col-md-3 header-container">
+        <header class="comparison-header">
+          <h3>Public Space</h3>
+        </header>
+        <div class="comparison-description">
+          <p>
+            Side by side comparison of neighborhood parks data with the average of the city's neighborhoods.
+          </p>
+          <ul>
+            <li><a href="http://www.lexingtonky.gov/index.aspx?page=1922" target="_blank">Get Involved</a></li>
+            <li><a href="http://www.lexingtonky.gov/index.aspx?page=198" target="_blank">Parks & Recreation</a></li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-block">Graph View <i class="fa fa-bar-chart-o fa-rotate-90"></i> </button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-9 table-container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th><i class="fa fa-database"></i> Category</th>
+              <th><i class="fa fa-home"></i> Your Neighborhood</th>
+              <th><i class="fa fa-dashboard"></i> City Average</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Park Acreage</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Biggest Park</td>
+              <td class="your-neighborhood-num">Castlewood</td>
+              <td>Beaumont</td>
+            </tr>
+            <tr>
+              <td># of Parks</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Playgrounds</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Trail Miles</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Sports Fields</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Community Gardens</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Event Spaces</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Activity Programs</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Dog Parks</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td># of Picnic Areas</td>
+              <td class="your-neighborhood-num">100</td>
+              <td>100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </section>
 </body>
 </html>
