@@ -48,6 +48,9 @@ function popup(feature) {
 };
 
 function onEachFeature(feature, layer) {
+  layer.on('click', function(e) {
+    map.fitBounds(e.target.getBounds());
+  });
   layer.bindPopup(popup(feature));
 };
 
