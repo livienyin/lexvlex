@@ -41,6 +41,11 @@ function style(feature) {
   };
 }
 
+function popup(feature) {
+  var tract = feature.properties;
+  var popupText = '<strong>Tract Number ' + tract.tract_name + '</strong>';
+}
+
 $.getJSON('./census_tracts.geojson', function(data) {
   var census_tracts = L.geoJson(data, {
     style: style,
