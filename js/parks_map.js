@@ -54,7 +54,7 @@ function onEachFeature(feature, layer) {
   layer.bindPopup(popup(feature));
 };
 
-$.getJSON('./census_tracts.geojson', function(data) {
+$.getJSON('./data/census_tracts.geojson', function(data) {
   var census_tracts = L.geoJson(data, {
     style: style,
     onEachFeature: onEachFeature
