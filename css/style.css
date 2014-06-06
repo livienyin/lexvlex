@@ -1,18 +1,24 @@
 body { 
   padding-top: 50px; 
+  font-family: "Open Sans", "Helvetica Neue", Helvetica,Arial, sans-serif;
 }
 
 .navbar-inverse {
-  background-color: #1A7FD3;
-  border-color: #1F79B5;
+  background-color: white;
+  border-color: #e8e8e8;
 }
 
 .navbar-inverse .navbar-brand {
-  color: white;
+  color: #ec2c22;
+  font-family: "Montserrat", Georgia;
 }
 
-.navbar-inverse .navbar-text {
-  color: white;
+.navbar-inverse .navbar-text, .navbar-inverse .navbar-nav>li>a {
+  color: gray;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-header>a:hover {
+  color: #ec2c22;
 }
 
 .jumbotron {
@@ -23,11 +29,12 @@ body {
 
 #map-prompt {
   position: relative;
-  background-color: white;
+  background-color: #00CAF2;
   top: 2em;
-  border: 1px solid #1A7FD3;
   border-radius: 3px;
   padding: 1.5em;
+  color: white;
+  box-shadow: 0 8px 16px -8px #595959;
 }
 
 #map-prompt p {
@@ -42,14 +49,14 @@ body {
 
 .comparison-row {
   position: relative;
-  background-color: #ddd;
+  background-color: #dcf5ff;
 }
 
 .table-container {
   background-color: white;
   padding: 20px 30px 20px 30px;
-  border: 1px solid #ddd;
   margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(16, 173, 239, 0.35);
 }
 
 table .your-neighborhood-num {
