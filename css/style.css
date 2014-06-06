@@ -30,15 +30,15 @@ body {
 #map-prompt {
   position: relative;
   background-color: #00CAF2;
-  top: 2em;
+  top: 3em;
   border-radius: 3px;
-  padding: 1.5em;
+  padding: 1.5em 2em;
   color: white;
   box-shadow: 0 8px 16px -8px #595959;
 }
 
 #map-prompt p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #home-map {
@@ -47,16 +47,56 @@ body {
   height: 500px;
 }
 
-.comparison-row {
-  position: relative;
-  background-color: #dcf5ff;
+.comparison-section {
+  background-color: #9FEEF4;
+}
+
+.comparison-container {
+  margin-top: 30px;
+}
+
+.comparison-container>.col-md-3,.col-md-9,.col-xs-6,.col-xs-12{
+  padding: 0;
+}
+
+.header-container {
+  border: 1px solid #e8eadf;
+  border-right: 0;
+  box-shadow: 5px 5px 10px 0px rgba(16, 173, 239, 0.25);
+}
+
+header.comparison-header h3 {
+  margin: 0;
+  padding: 15px 25px 15px 25px;
+  background-color: white;
+  border-bottom: 1px solid #e8eadf;
+  color: #333;
+  font-weight: 700;
+}
+
+.header-container .comparison-description {
+  padding: 15px 25px 25px 25px;
+  background-color: white;
+}
+
+.header-container .comparison-description p {
+  margin-bottom: 1em;
+}
+
+.header-container .comparison-description ul {
+  margin-bottom: 1.2em;
+}
+
+.header-container .comparison-description .btn-primary {
+  background-color: #ff4343;
+  border-color: #ff514d;
 }
 
 .table-container {
+  border: 1px solid #e8eadf;
   background-color: white;
-  padding: 20px 30px 20px 30px;
-  margin-top: 30px;
-  box-shadow: 0 5px 15px rgba(16, 173, 239, 0.35);
+  padding: 20px 35px 20px 35px;
+  box-shadow: 5px 5px 10px 0px rgba(16, 173, 239, 0.25);
 }
 
 table .your-neighborhood-num {
