@@ -1,18 +1,24 @@
 body { 
   padding-top: 50px; 
+  font-family: "Open Sans", "Helvetica Neue", Helvetica,Arial, sans-serif;
 }
 
 .navbar-inverse {
-  background-color: #1A7FD3;
-  border-color: #1F79B5;
+  background-color: white;
+  border-color: #e8e8e8;
 }
 
 .navbar-inverse .navbar-brand {
-  color: white;
+  color: #ec2c22;
+  font-family: "Montserrat", Georgia;
 }
 
-.navbar-inverse .navbar-text {
-  color: white;
+.navbar-inverse .navbar-text, .navbar-inverse .navbar-nav>li>a {
+  color: gray;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-header>a:hover {
+  color: #ec2c22;
 }
 
 .jumbotron {
@@ -23,15 +29,16 @@ body {
 
 #map-prompt {
   position: relative;
-  background-color: white;
-  top: 2em;
-  border: 1px solid #1A7FD3;
+  background-color: #00CAF2;
+  top: 3em;
   border-radius: 3px;
-  padding: 1.5em;
+  padding: 1.5em 2em;
+  color: white;
+  box-shadow: 0 8px 16px -8px #595959;
 }
 
 #map-prompt p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #home-map {
@@ -45,16 +52,56 @@ body {
   width: 100%;
 }
 
-.comparison-row {
-  position: relative;
-  background-color: #ddd;
+.comparison-section {
+  background-color: #9FEEF4;
+}
+
+.comparison-container {
+  margin-top: 30px;
+}
+
+.comparison-container>.col-md-3,.col-md-9,.col-xs-6,.col-xs-12{
+  padding: 0;
+}
+
+.header-container {
+  border: 1px solid #e8eadf;
+  border-right: 0;
+  box-shadow: 5px 5px 10px 0px rgba(16, 173, 239, 0.25);
+}
+
+header.comparison-header h3 {
+  margin: 0;
+  padding: 15px 25px 15px 25px;
+  background-color: white;
+  border-bottom: 1px solid #e8eadf;
+  color: #333;
+  font-weight: 700;
+}
+
+.header-container .comparison-description {
+  padding: 15px 25px 25px 25px;
+  background-color: white;
+}
+
+.header-container .comparison-description p {
+  margin-bottom: 1em;
+}
+
+.header-container .comparison-description ul {
+  margin-bottom: 1.2em;
+}
+
+.header-container .comparison-description .btn-primary {
+  background-color: #ff4343;
+  border-color: #ff514d;
 }
 
 .table-container {
+  border: 1px solid #e8eadf;
   background-color: white;
-  padding: 20px 30px 20px 30px;
-  border: 1px solid #ddd;
-  margin-top: 30px;
+  padding: 20px 35px 20px 35px;
+  box-shadow: 5px 5px 10px 0px rgba(16, 173, 239, 0.25);
 }
 
 table .your-neighborhood-num {
