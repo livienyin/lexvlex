@@ -47,6 +47,11 @@ body {
   height: 500px;
 }
 
+#map {
+  height: 500px;
+  width: 100%;
+}
+
 .comparison-section {
   background-color: #9FEEF4;
 }

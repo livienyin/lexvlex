@@ -12,8 +12,11 @@
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 
   <!-- javascript plugins -->
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
@@ -38,15 +41,18 @@
     </div>
   </div>
   <div class="jumbotron">
+    <div id="map"></div>
+<!--
     <div id="home-map">
       <div class="container">
         <div id="map-prompt" class="col-xs-6 col-md-4">
           <p>Select a region to compare parks data with the rest of the city</p>
+          <div id="map"></div>
         </div>
       </div>
     </div>
+-->
   </div>
-
   <section class="row comparison-section">
     <article id="parks" class="container comparison-container">
       <div class="col-xs-6 col-md-3 header-container">
@@ -134,5 +140,6 @@
       </div>
     </article>
   </section>
+  <script src="./js/parks_map.js"></script>
 </body>
 </html>
