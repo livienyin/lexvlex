@@ -34,9 +34,9 @@ function style(feature) {
 
   return {
     fillColor: tractColor,
-    weight: 1,
-    opacity: 0.7,
-    color: tractColor,
+    weight: 2,
+    opacity: 1,
+    color: 'black',
     fillOpacity: 0.6
   };
 };
