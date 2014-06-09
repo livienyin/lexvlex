@@ -44,13 +44,13 @@ function style(feature) {
 function popup(feature) {
   var tract = feature.properties;
   var popupText = '<strong>Tract Number ' + tract.tract_name + '</strong>';
-  if (tract.number_of_parks > 0) {
+/*  if (tract.number_of_parks > 0) {
     for (var amenity in tract) {
       if (amenity != 'GEOID10' && amenity != 'tract_name') {
         popupText += '<br>' + statistics[amenity] + ': ' + tract[amenity];
       }
     }
-  }
+  } */
   return popupText;
 };
 
