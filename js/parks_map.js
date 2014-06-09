@@ -34,9 +34,9 @@ function style(feature) {
 
   return {
     fillColor: tractColor,
-    weight: 1,
-    opacity: 0.7,
-    color: tractColor,
+    weight: 2,
+    opacity: 1,
+    color: 'black',
     fillOpacity: 0.6
   };
 };
@@ -44,16 +44,20 @@ function style(feature) {
 function popup(feature) {
   var tract = feature.properties;
   var popupText = '<strong>Tract Number ' + tract.tract_name + '</strong>';
-/*  for (var amenity in tract) {
-    popupText += '<br>' + tract.statistics[amenity] + ': ' + tract.amenity;
-  }; */
+  if (tract.number_of_parks > 0) {
+    for (var amenity in tract) {
+      if (amenity != 'GEOID10' && amenity != 'tract_name') {
+        popupText += '<br>' + statistics[amenity] + ': ' + tract[amenity];
+      }
+    }
+  }
   return popupText;
 };
 
 function onEachFeature(feature, layer) {
-  layer.on('click', function(e) {
+/*  layer.on('click', function(e) {
     map.fitBounds(e.target.getBounds());
-  });
+  }); */
   layer.bindPopup(popup(feature));
 };
 
