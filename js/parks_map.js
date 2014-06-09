@@ -21,6 +21,8 @@ var map = L.map('map', {
   minZoom: 10
 });
 
+map.scrollWheelZoom.disable();
+
 var basemapTiles = L.tileLayer('http://{s}.tiles.mapbox.com/v3/codeforamerica.i6fijbde/{z}/{x}/{y}.png').addTo(map);
 
 function style(feature) {
