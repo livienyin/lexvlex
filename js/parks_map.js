@@ -61,6 +61,20 @@ function onEachFeature(feature, layer) {
   layer.bindPopup(popup(feature));
 };
 
+function update_stats(feature) {
+  var tract = feature.properties;
+  for (var amenity in tract) {
+    if (amenity != 'GEOID10' && amenity != 'tract_name') {
+      if (tract.number_of_parks > 0) {
+        tract_amenity = tract[amenity];
+      } else {
+        tract_amenity = 'N/A'
+      }
+      $('#' + amenity).html(tract_amenity);
+    }
+  }
+}
+
 $.getJSON('./data/census_tracts.geojson', function(data) {
   census_tracts = L.geoJson(data, {
     style: style,
