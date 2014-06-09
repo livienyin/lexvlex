@@ -62,7 +62,7 @@ function onEachFeature(feature, layer) {
 };
 
 $.getJSON('./data/census_tracts.geojson', function(data) {
-  var census_tracts = L.geoJson(data, {
+  census_tracts = L.geoJson(data, {
     style: style,
     onEachFeature: onEachFeature
   });
