@@ -40,103 +40,100 @@
       </div>
     </div>
   </div>
-  <div class="jumbotron">
+  <section class="map-section">
     <div id="map"></div>
-<!--
-    <div id="home-map">
-      <div class="container">
-        <div id="map-prompt" class="col-xs-6 col-md-4">
-          <p>Select a region to compare parks data with the rest of the city</p>
-          <div id="map"></div>
-        </div>
+    <div id="map-prompt-container" class="container">
+      <div id="map-prompt" class="col-xs-6 col-md-4">
+        <p>Select a region to compare parks data with the rest of the city</p>
       </div>
     </div>
--->
-  </div>
-  <section class="row comparison-section">
+  </section>
+  <section class="comparison-section">
     <article id="parks" class="container comparison-container">
-      <div class="col-xs-6 col-md-3 header-container">
-        <header class="comparison-header">
-          <h3>Public Space</h3>
-        </header>
-        <div class="comparison-description">
-          <p>
-            Side by side comparison of neighborhood parks data with the average of the city's neighborhoods.
-          </p>
-          <ul>
-            <li><a href="http://www.lexingtonky.gov/index.aspx?page=1922" target="_blank">Get Involved</a></li>
-            <li><a href="http://www.lexingtonky.gov/index.aspx?page=198" target="_blank">Parks & Recreation</a></li>
-          </ul>
-          <button type="button" class="btn btn-primary btn-block">Graph View <i class="fa fa-bar-chart-o fa-rotate-90"></i> </button>
+      <div class="row">
+        <div class="col-xs-6 col-md-3 header-container">
+          <header class="comparison-header">
+            <h3>Public Space</h3>
+          </header>
+          <div class="comparison-description">
+            <p>
+              Side by side comparison of neighborhood parks data with the average of the city's neighborhoods.
+            </p>
+            <ul>
+              <li><a href="http://www.lexingtonky.gov/index.aspx?page=1922" target="_blank">Get Involved</a></li>
+              <li><a href="http://www.lexingtonky.gov/index.aspx?page=198" target="_blank">Parks & Recreation</a></li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block">Graph View <i class="fa fa-bar-chart-o fa-rotate-90"></i> </button>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-9 table-container">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th><i class="fa fa-database"></i> Category</th>
-              <th><i class="fa fa-home"></i> Your Neighborhood</th>
-              <th><i class="fa fa-dashboard"></i> City Average</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Total Park Acreage</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td>Biggest Park</td>
-              <td class="your-neighborhood-num">Castlewood</td>
-              <td>Beaumont</td>
-            </tr>
-            <tr>
-              <td># of Parks</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Playgrounds</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Trail Miles</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Sports Fields</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Community Gardens</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Event Spaces</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Activity Programs</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Dog Parks</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td># of Picnic Areas</td>
-              <td class="your-neighborhood-num">100</td>
-              <td>100</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="col-xs-12 col-md-9 table-container">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th><i class="fa fa-database"></i> Category</th>
+                <th><i class="fa fa-home"></i> Your Neighborhood</th>
+                <th><i class="fa fa-dashboard"></i> City Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Total Park Acreage</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Biggest Park</td>
+                <td class="your-neighborhood-num">Castlewood</td>
+                <td>Beaumont</td>
+              </tr>
+              <tr>
+                <td># of Parks</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Playgrounds</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Trail Miles</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Sports Fields</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Community Gardens</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Event Spaces</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Activity Programs</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Dog Parks</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td># of Picnic Areas</td>
+                <td class="your-neighborhood-num">100</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </article>
   </section>

@@ -21,43 +21,42 @@ body {
   color: #ec2c22;
 }
 
-.jumbotron {
-  padding:0;
+.map-section {
+  padding: 0;
   margin: 0;
-  background-color: #f7f8f3;
+  position: relative;
+  height: 35em;
+}
+
+#map-prompt-container {
+  position: relative;
 }
 
 #map-prompt {
-  position: relative;
   background-color: #00CAF2;
   top: 3em;
   border-radius: 3px;
-  padding: 1.5em 2em;
+  padding: 1.2em 1.8em;
   color: white;
   box-shadow: 0 8px 16px -8px #595959;
+  font-size: 1.4em;
 }
 
 #map-prompt p {
-  margin: 0;
-}
-
-#home-map {
-  background-image:url('../images/lex_map.png');
-  width: 100%;
-  height: 500px;
+  margin-bottom: 0;
 }
 
 #map {
-  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
 }
 
 .comparison-section {
   background-color: #9FEEF4;
-}
-
-.comparison-container {
-  margin-top: 30px;
+  padding-top: 2em;
 }
 
 .comparison-container>.col-md-3,.col-md-9,.col-xs-6,.col-xs-12{
