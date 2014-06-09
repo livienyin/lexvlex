@@ -55,9 +55,9 @@ function popup(feature) {
 };
 
 function onEachFeature(feature, layer) {
-/*  layer.on('click', function(e) {
-    map.fitBounds(e.target.getBounds());
-  }); */
+  layer.on('click', function(e) {
+    update_stats(e.target.feature);
+  });
   layer.bindPopup(popup(feature));
 };
 
