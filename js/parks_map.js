@@ -59,6 +59,12 @@ function onEachFeature(feature, layer) {
     map.fitBounds(e.target.getBounds());
   }); */
   layer.bindPopup(popup(feature));
+  layer.on('mouseover', function(e) {
+    e.target.openPopup();
+  });
+  layer.on('mouseout', function(e) {
+    e.target.closePopup();
+  })
 };
 
 $.getJSON('./data/census_tracts.geojson', function(data) {
