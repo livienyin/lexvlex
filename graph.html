@@ -12,6 +12,7 @@
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/d3-styles.css" type="text/css">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 
   <!-- javascript plugins -->
@@ -63,80 +64,17 @@
               <li><a href="http://www.lexingtonky.gov/index.aspx?page=1922" target="_blank">Get Involved</a></li>
               <li><a href="http://www.lexingtonky.gov/index.aspx?page=198" target="_blank">Parks & Recreation</a></li>
             </ul>
-            <a href="graph.html" class="btn btn-primary btn-block" role="button">Graph View <i class="fa fa-bar-chart-o fa-rotate-90"></i></a>
+            <a href="index.html" class="btn btn-primary btn-block" role="button">Table View <i class="fa fa-table fa-rotate-90"></i></a>
           </div>
         </div>
         <div class="col-xs-12 col-md-9 comparison-content">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th><i class="fa fa-database"></i> Category</th>
-                <th id="tract_name"><i class="fa fa-home"></i> Your Neighborhood</th>
-                <th><i class="fa fa-dashboard"></i> City Average</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Total Park Acreage</td>
-                <td class="your-neighborhood-num" id="total_park_acres">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>Biggest Park</td>
-                <td class="your-neighborhood-num" id="biggest_park">Castlewood</td>
-                <td>Beaumont</td>
-              </tr>
-              <tr>
-                <td># of Parks</td>
-                <td class="your-neighborhood-num" id="number_of_parks">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Playgrounds</td>
-                <td class="your-neighborhood-num" id="playgrounds">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Trail Miles</td>
-                <td class="your-neighborhood-num" id="trail">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Sports Fields</td>
-                <td class="your-neighborhood-num" id="fields">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Community Gardens</td>
-                <td class="your-neighborhood-num" id="gardens">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Event Spaces</td>
-                <td class="your-neighborhood-num" id="event_space">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Activity Programs</td>
-                <td class="your-neighborhood-num" id="activities">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Dog Parks</td>
-                <td class="your-neighborhood-num" id="dog_parks">100</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td># of Picnic Areas</td>
-                <td class="your-neighborhood-num" id="picnic">100</td>
-                <td>100</td>
-              </tr>
-            </tbody>
-          </table>
+          <svg class="comparison-chart"></svg>
         </div>
       </div>
     </article>
   </section>
   <script src="./js/parks_map.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="./js/bar_chart.js"></script>
 </body>
 </html>
