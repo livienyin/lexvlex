@@ -1,30 +1,32 @@
 var width = parseInt(d3.select(".comparison-chart").style("width")),
-    barHeight = 20;
+    height = 400;
 
-var x = d3.scale.linear()
-    .range([0, width]); 
+var y = d3.scale.linear()
+    .range([height, 0]); 
 
 var chart = d3.select(".comparison-chart")
-    .attr("width", width);
+    .attr("width", width)
+    .attr("height", height);
 
 d3.tsv("./data/city_average.tsv", type, function(error, data) {
-  x.domain([0, d3.max(data, function(d) { return d.value; })]);
+  y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-  chart.attr("height", barHeight * data.length);
+  var barWidth = width / data.length;
 
   var bar = chart.selectAll("g")
       .data(data)
     .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+      .attr("transform", function(d, i) { return "translate(" + i * barWidth + ",0)"; });
 
   bar.append("rect")
-      .attr("width", function(d) { return x(d.value); })
-      .attr("height", barHeight - 1);
+      .attr("y", function(d) { return y(d.value); })
+      .attr("height", function(d) { return height - y(d.value); })
+      .attr("width", barWidth - 1);
 
   bar.append("text")
-      .attr("x", function(d) { return x(d.value) - 3; })
-      .attr("y", barHeight / 2)
-      .attr("dy", ".35em")
+      .attr("x", barWidth / 2)
+      .attr("y", function(d) { return y(d.value) + 3; })
+      .attr("dy", ".75em")
       .text(function(d) { return d.value; });
 });
 
