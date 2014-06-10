@@ -44,22 +44,36 @@ function style(feature) {
 function popup(feature) {
   var tract = feature.properties;
   var popupText = '<strong>Tract Number ' + tract.tract_name + '</strong>';
-  if (tract.number_of_parks > 0) {
+/*  if (tract.number_of_parks > 0) {
     for (var amenity in tract) {
       if (amenity != 'GEOID10' && amenity != 'tract_name') {
         popupText += '<br>' + statistics[amenity] + ': ' + tract[amenity];
       }
     }
-  }
+  } */
   return popupText;
 };
 
 function onEachFeature(feature, layer) {
-/*  layer.on('click', function(e) {
-    map.fitBounds(e.target.getBounds());
-  }); */
+  layer.on('click', function(e) {
+    update_stats(e.target.feature);
+  });
   layer.bindPopup(popup(feature));
 };
+
+function update_stats(feature) {
+  var tract = feature.properties;
+  for (var amenity in tract) {
+    if (amenity != 'GEOID10' && amenity != 'tract_name') {
+      if (tract.number_of_parks > 0) {
+        tract_amenity = tract[amenity];
+      } else {
+        tract_amenity = 'N/A'
+      }
+      $('#' + amenity).html(tract_amenity);
+    }
+  }
+}
 
 $.getJSON('./data/census_tracts.geojson', function(data) {
   census_tracts = L.geoJson(data, {

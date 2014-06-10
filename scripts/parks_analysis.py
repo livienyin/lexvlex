@@ -7,7 +7,8 @@ def total_park_acres(parks):
   acres = 0
   for park in parks:
     acres += park['properties']['ACRES']
-  return acres
+  rounded_acres = round(acres, 3)
+  return rounded_acres
 
 def biggest_park(parks):
   biggest_park = ''
@@ -117,7 +118,7 @@ def transform(parks, census_tracts):
   return census_tracts
 
 def init():
-  with open('lexington_parks.geojson') as a, open('census_tracts.geojson') as b:
+  with open('data/lexington_parks.geojson') as a, open('data/census_tracts.geojson') as b:
     lex_parks = json.load(a)
     tracts = json.load(b)
 
@@ -126,7 +127,7 @@ def init():
 
   tracts['features'] = transform(parks, census_tracts)
 
-  with open('census_tracts.geojson', 'w') as c:
+  with open('data/census_tracts.geojson', 'w') as c:
     json.dump(tracts, c)
 
 init()
