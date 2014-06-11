@@ -70,7 +70,9 @@ function onEachFeature(feature, layer) {
 function update_stats(feature) {
   var tract = feature.properties;
   for (var amenity in tract) {
-    if (amenity != 'GEOID10' && amenity != 'tract_name') {
+    if (amenity == 'tract_name') {
+      $('#tract_name').html('Tract Number ' + tract[amenity])
+    } else if (amenity != 'GEOID10') {
       if (tract.number_of_parks > 0) {
         tract_amenity = tract[amenity];
       } else {
@@ -79,7 +81,7 @@ function update_stats(feature) {
       $('#' + amenity).html(tract_amenity);
     }
   }
-}
+};
 
 $.getJSON('./data/census_tracts.geojson', function(data) {
   census_tracts = L.geoJson(data, {
