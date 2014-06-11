@@ -59,12 +59,12 @@ function onEachFeature(feature, layer) {
     update_stats(e.target.feature);
   });
   layer.bindPopup(popup(feature));
-  layer.on('mouseover', function(e) {
+/*  layer.on('mouseover', function(e) {
     e.target.openPopup();
   });
   layer.on('mouseout', function(e) {
     e.target.closePopup();
-  })
+  });*/
 };
 
 function update_stats(feature) {
